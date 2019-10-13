@@ -1,0 +1,1 @@
+<footer>Developed by Rizky Rizal</footer>

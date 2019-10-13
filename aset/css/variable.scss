@@ -1,0 +1,99 @@
+
+$blue       : #3498db;
+$blue2      : #00a8ff;
+$blue3      : #2980b9;
+$black      : #2C3A47;
+$white      : #FFFFFF;
+$white2     : #ecf0f1;
+$white3     : #bdc3c7;
+$white4     : #95a5a6;
+$trans      : rgba(0,0,0, .1);
+$white5     : #7f8c8d;
+$white6     : #f5f6fa;
+$red        : #e84118;
+$red2       : #c0392b;
+$green      : #ebf8a4;
+$green2     : #a2d246;
+$green3     : #82ca77;
+$green4     : #3a7d33;
+$green5     : #2ecc71;
+
+@mixin animation($str) 
+{
+    -webkit-animation: #{$str};  
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};  
+    animation: #{$str};
+}
+
+@mixin box-shadow($box...) 
+{
+    -webkit-box-shadow: $box;  
+    -moz-box-shadow: $box;
+    -ms-box-shadow: $box;
+    -o-box-shadow: $box;  
+    box-shadow: $box;
+}
+
+@mixin box-sizing($box)
+{
+    -webkit-box-sizing: $box;  
+    -moz-box-sizing: $box;
+    -ms-box-sizing: $box;
+    -o-box-sizing: $box;  
+    box-sizing: $box;
+}
+
+@mixin transition($transition) 
+{
+    -webkit-transition: $transition;  
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;  
+    transition: $transition;
+}
+
+@mixin border-radius($border)
+{
+    -webkit-border-radius: $border;  
+    -moz-border-radius: $border;
+    -ms-border-radius: $border;
+    -o-border-radius: $border;  
+    border-radius: $border;
+}
+
+@mixin transform($transform)
+{
+    -webkit-transform: $transform;  
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;  
+    transform: $transform;
+}
+@mixin keyframes($name-animation)
+{
+    @-webkit-keyframes #{$name-animation} { @content; }
+    @-moz-keyframes    #{$name-animation} { @content; }
+    @-ms-keyframes     #{$name-animation} { @content; }
+    @-o-keyframes      #{$name-animation} { @content; }
+    @keyframes         #{$name-animation} { @content; }
+}
+
+@mixin pre()
+{
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+@mixin selection()
+{
+    ::selection         { background-color: #E13300; color: white; }
+	::-moz-selection    { background-color: #E13300; color: white; }
+	::-webkit-selection { background-color: #E13300; color: white; }
+	::-o-selection      { background-color: #E13300; color: white; }
+	::-ms-selection     { background-color: #E13300; color: white; }
+}
